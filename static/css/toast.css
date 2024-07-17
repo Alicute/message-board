@@ -1,0 +1,11 @@
+.toast {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; /* 绿色底色 */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+}

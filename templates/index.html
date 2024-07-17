@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Board</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/toast.css') }}">
+     <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        <script>
+        // 将 messages 数据赋值给一个全局变量
+        var messages = {{ messages | tojson | safe }};
+        {#var files = files#}
+    </script>
+</head>
+<body>
+            <div id="toast" class="toast"></div>
+    <div class="container">
+    {#左边#}
+    <div id="input-box" class="left-column center-text">
+{#标题#}
+        <h1 class="center-text">Message Board</h1>
+{#        输入框#}
+        <input class="input-style" type="text" id="message-input" >
+
+{#        操作栏#}
+
+        <div>
+            <br>
+
+<div>
+        <button class="normal-btn"  id="submit-btn">提交</button>
+        <button class="normal-btn" id="clear-btn" onclick="$('#message-input').val('') ">清除</button>
+         <button class="normal-btn" id="delete-selected-btn">勾选删除</button>
+
+</div>
+ <br>
+
+     <table id="messages-container">
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="select-all"></th>
+                <th class="id-column">ID</th>
+
+                <th class="content-column">内容</th>
+                 <th class="time-column">时间</th>
+                <th class="actions-column">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+
+    </div>
+{#        右边#}
+    <div  class="right-column center-text">
+        <h3>扫码访问此页面</h3>
+        <img src="{{ url_for('static', filename='qrcode.png') }}" alt="QR Code">
+
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#input-box {
+    margin-bottom: 20px;
+}
+.normal-btn {
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: auto;
+}
+.container {
+      max-width: 100%; /* 设置最大宽度 */
+    display: flex;
+    flex-wrap: wrap; /* 子元素换行显示 */
+    height: 100%;
+}
+.left-column {
+    width: 70%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.right-column {
+    display: block;
+    width: 30%;
+}
+
+
+.input-style{
+    width: 550px;
+    height: 44px;
+}
+
+@media only screen and (max-width: 600px) {
+
+     .container .left-column {
+        width: 100%; /* 将宽度设置为100% */
+
+    }
+    .container .right-column {
+        display: none; /* 隐藏子元素 */
+    }
+    .input-style{
+        width: 100%;
+    }
+}
+
+
+.message {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    max-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: separate;
+
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 8px;
+}
+
+td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    color: red;
+
+}
+tbody{
+    text-align: left;
+}
+
+
+.id-column {
+    width: 4%;
+}
+
+.time-column {
+    width: 15%;
+}
+
+.content-column {
+    width: 63%;
+}
+
+.actions-column {
+    width: 18%;
+}
+
+.center-text{
+     text-align: center;
+}
+#messages-container {
+
+    height: 100%;
+}
+
+
